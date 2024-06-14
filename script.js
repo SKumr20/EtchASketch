@@ -4,6 +4,13 @@ output.innerHTML = slider.value; // Display the default slider value
 var sliderValue = slider.value;
 
 
+gridContainer.style.height = "600px"
+gridContainer.style.width = "600px"
+gridContainer.style.display = "flex";
+gridContainer.style.flexWrap = "wrap";
+
+
+
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() 
 {
@@ -30,12 +37,21 @@ slider.oninput = function()
 
 slider.oninput();
 
+// Create function to change color of squares
 
-gridContainer.style.height = "600px"
-gridContainer.style.width = "600px"
-gridContainer.style.display = "flex";
-gridContainer.style.flexWrap = "wrap";
+// Access the squares using a const
 
+const drawBox = document.getElementsByClassName("squares");
+
+function draw(event)
+{
+  event.target.style.backgroundColor = "grey";
+}
+
+for (let i = 0; i < drawBox.length; i++) 
+{
+  drawBox[i].addEventListener("mouseover", draw);
+}
 
 
 
