@@ -18,16 +18,17 @@ gridContainer.style.display = "flex";
 gridContainer.style.flexWrap = "wrap";
 
 
-// Create a 9x9 grid inside gridContainer div
+// Create a grid inside gridContainer div
 
-for (let i=0; i < 400; i++) {
+const gridSize = 20;
+
+for (let i=0; i < gridSize*gridSize; i++) {
   let boxes = document.createElement("div");
   boxes.classList.add("squares");
   boxes.style.width = "30px";
   boxes.style.height = "30px"
   gridContainer.appendChild(boxes);
 }
-
 
 
 
