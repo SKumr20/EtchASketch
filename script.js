@@ -20,13 +20,14 @@ gridContainer.style.flexWrap = "wrap";
 
 // Create a grid inside gridContainer div
 
-const gridSize = 20;
+const gridSize = 4; // Number of boxes would be square of this value.
+const boxHeightWidth = 600 / gridSize;
 
 for (let i=0; i < gridSize*gridSize; i++) {
   let boxes = document.createElement("div");
   boxes.classList.add("squares");
-  boxes.style.width = "30px";
-  boxes.style.height = "30px"
+  boxes.style.width = boxHeightWidth + "px";
+  boxes.style.height = boxHeightWidth + "px"
   gridContainer.appendChild(boxes);
 }
 
